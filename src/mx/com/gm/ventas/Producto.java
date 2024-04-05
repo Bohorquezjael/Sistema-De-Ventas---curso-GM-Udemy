@@ -1,12 +1,14 @@
 package mx.com.gm.ventas;
 
 public class Producto {
-    private int idProducto;
+
+    private final int idProducto;
     private String nombre;
     private double precio;
     private static int contadorProductos;
 
     private Producto(){
+        //! Podemos simplificar a una linea y usar el pre-incremento 
         Producto.contadorProductos++;
         this.idProducto = Producto.contadorProductos;
     }
